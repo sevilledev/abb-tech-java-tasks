@@ -23,11 +23,6 @@ public class Main {
 
         library.displaySections();
 
-//        library.filterBooks(new BookFilter() {
-//            @Override
-//            public boolean filter(Library<?>.Book book) {
-//                return book.getYear() > 2015;
-//            }
-//        });
+        library.filterBooks(book -> book.getYear() >= 2000);
     }
 }

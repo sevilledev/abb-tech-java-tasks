@@ -18,12 +18,24 @@ public class Library<T extends Library.Section> {
         }
     }
 
+    void filterBooks(BookFilter filter) {
+        System.out.println("\nFiltered Books:");
+        for (T section: sections) {
+            for (Library<?>.Book book : section.getBooks()) {
+                if (filter.filter(book)) {
+                    System.out.println(book);
+                }
+            }
+        }
+    }
+
     public static class Section {
         private String name;
         private List<Library<?>.Book> books;
 
         public Section(String name) {
             this.name = name;
+            this.books = new ArrayList<>();
         }
 
         public String getName() {
