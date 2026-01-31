@@ -11,10 +11,8 @@ public class Library<T extends Library.Section> {
 
     void displaySections() {
         for (T section : sections) {
-            System.out.println("Section: " + section.getName());
-            for (Library<?>.Book book : section.getBooks()) {
-                System.out.println("  " + book);
-            }
+            System.out.println("\nSection: " + section.getName());
+            section.displayBooks();
         }
     }
 
@@ -66,14 +64,6 @@ public class Library<T extends Library.Section> {
             this.title = title;
             this.author = author;
             this.year = year;
-        }
-
-        public String getTitle() {
-            return title;
-        }
-
-        public String getAuthor() {
-            return author;
         }
 
         public int getYear() {
