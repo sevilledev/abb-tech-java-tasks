@@ -1,4 +1,4 @@
-package lesson7;
+package lesson7.chorefiles;
 
 public class Stats<T extends Number> {
     T[] nums;

@@ -1,4 +1,4 @@
-package lesson7;
+package lesson7.chorefiles;
 
 import java.time.*;
 import java.util.*;

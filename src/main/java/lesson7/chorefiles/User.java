@@ -1,4 +1,4 @@
-package lesson7;
+package lesson7.chorefiles;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
