@@ -9,7 +9,7 @@ public class RentalSystem {
 
     Map<Customer, Car> activeRentals = new HashMap<>();
     Map<Car, LocalDateTime> rentStartTimes = new HashMap<>();
-    Map<Car, List<String>> rentalHistory = new HashMap<>();
+    Map<Car, List<RentalRecord>> rentalHistory = new HashMap<>();
 
     public void addCar(Car car) {
         cars.add(car);
@@ -37,7 +37,7 @@ public class RentalSystem {
             long days = d.toDays();
             long hours = d.toHours() % 24;
 
-            String record = "rented at: " + startTime + ", returned at: " + startTime;
+            RentalRecord record = new RentalRecord(startTime, endTime);
 
             availableCars.add(car);
             rentalHistory.computeIfAbsent(car, k -> new ArrayList<>()).add(record);
