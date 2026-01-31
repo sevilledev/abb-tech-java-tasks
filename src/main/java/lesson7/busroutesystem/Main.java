@@ -23,27 +23,27 @@ public class Main {
         Bus bus = new Bus();
 
         // Stop 1
-        System.out.println("\n Stop 1 reached.");
+        System.out.println("\nStop 1 reached.");
         bus.dropPassengers();
         bus.pickPassengers(stop1);
         System.out.println("Bus now: " + bus.passengers);
         System.out.println("Stop 1 remaining: " + stop1.waitingPassengers);
 
         // Stop 2
-        System.out.println("\n Stop 2 reached.");
+        System.out.println("\nStop 2 reached.");
         bus.dropPassengers();
         bus.pickPassengers(stop2);
         System.out.println("Bus now: " + bus.passengers);
         System.out.println("Stop 2 remaining: " + stop2.waitingPassengers);
 
         // Stop 3
-        System.out.println("\n Stop 3 reached.");
+        System.out.println("\nStop 3 reached.");
         bus.dropPassengers();
         bus.pickPassengers(stop3);
         System.out.println("Bus now: " + bus.passengers);
         System.out.println("Stop 3 remaining: " + stop3.waitingPassengers);
 
-        System.out.println("\n Simulation finished.");
+        System.out.println("\nSimulation finished.");
         System.out.println("Final passengers in bus: " + bus.passengers);
     }
 }

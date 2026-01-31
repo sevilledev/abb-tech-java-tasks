@@ -24,7 +24,7 @@ public class Bus {
             if (p == null) break;
 
             passengers.add(p);
-            System.out.println(p.name + " picked by bus.");
+            System.out.println(p + " picked by bus.");
         }
     }
 

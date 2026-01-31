@@ -11,9 +11,6 @@ public class Passenger {
 
     @Override
     public String toString() {
-        return "Passenger{" +
-                "name='" + name + '\'' +
-                ", isPriority=" + isPriority +
-                '}';
+        return name + (isPriority ? " (Priority)" : "");
     }
 }
