@@ -5,12 +5,17 @@ import java.time.LocalDate;
 public class BorrowRecord {
     private Book book;
     private LocalDate borrowedDate;
-    private LocalDate returnedDate; // optional, if not returned -> null
+    private LocalDate returnedDate;
 
     public BorrowRecord(Book book, LocalDate borrowedDate) {
         this.book = book;
         this.borrowedDate = borrowedDate;
-        this.returnedDate = null;
+    }
+
+    public BorrowRecord(Book book, LocalDate borrowedDate, LocalDate returnedDate) {
+        this.book = book;
+        this.borrowedDate = borrowedDate;
+        this.returnedDate = returnedDate;
     }
 
     public Book getBook() {
